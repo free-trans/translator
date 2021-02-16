@@ -11,6 +11,11 @@ const config: Config.InitialOptions = {
   roots: [root],
   name: packageName,
   displayName: packageName,
+  globals: {
+    'ts-jest': {
+      tsConfigFile: 'tsconfig.json',
+    },
+  },
 };
 
 export default config;

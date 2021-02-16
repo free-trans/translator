@@ -1,6 +1,7 @@
 /* eslint-disable max-classes-per-file */
-import {
-  Translator,
+import { Translator } from '../src/translator';
+
+import type {
   TranslateQueryResult,
   LanguageCode,
   Languages,
