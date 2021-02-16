@@ -2,7 +2,6 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "declaration": true,
-    "resolveJsonModule": true,
     "skipLibCheck": true,
     /* 模块导入配置项 */
     "esModuleInterop": true
