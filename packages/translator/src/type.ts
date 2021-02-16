@@ -11,6 +11,11 @@ export interface TranslatorOptions<Config extends {}> {
   config?: Config;
 }
 
+export enum RequestErrorCode {
+  LIMITED = 429,
+  UNAUTHORIZED = 401,
+}
+
 export interface TranslateStatus {
   /**
    * 是否成功
@@ -19,27 +24,23 @@ export interface TranslateStatus {
   /**
    * 如果失败的话 失败的错误码
    */
-  code?: number;
+  code?: RequestErrorCode | number;
   /**
    * 如果失败的话 失败的提示信息
    */
   message?: string;
 }
 
-/** 统一的查询结果的数据结构 */
-export interface TranslateResult extends TranslateStatus {
-  /**
-   * 翻译器
-   */
-  type: string;
-
+export interface TranslateInput {
   /**
    * 原文
    */
   text: string;
   from: LanguageCode;
   to: LanguageCode;
+}
 
+export interface TranslateData {
   /** 原文 */
   origin: {
     paragraphs: string[];
@@ -52,4 +53,18 @@ export interface TranslateResult extends TranslateStatus {
   };
 }
 
-export type TranslateQueryResult = Omit<TranslateResult, 'type'>;
+/** 统一的查询结果的数据结构 */
+export interface TranslateResult
+  extends TranslateStatus,
+    TranslateInput,
+    TranslateData {
+  /**
+   * 翻译器
+   */
+  type: string;
+}
+
+export interface TranslateQueryResult
+  extends TranslateData,
+    TranslateStatus,
+    Partial<TranslateInput> {}

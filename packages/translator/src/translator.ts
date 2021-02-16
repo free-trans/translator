@@ -12,6 +12,8 @@ import type {
   TranslateQueryResult,
 } from './type';
 
+import type { RequestErrorCode } from './type';
+
 /**
  * 翻译器
  */
@@ -59,11 +61,11 @@ export abstract class Translator<Config extends Record<string, any> = {}> {
     });
 
     return {
-      ...queryResult,
+      type: this.name,
       text,
       from,
       to,
-      type: this.name,
+      ...queryResult,
     };
   }
 
@@ -94,8 +96,8 @@ export abstract class Translator<Config extends Record<string, any> = {}> {
    * @param code
    * @param message
    */
-  getErrorResult(
-    code: number,
+  protected getErrorResult(
+    code: RequestErrorCode,
     message: string,
   ): Omit<TranslateQueryResult, 'from' | 'to' | 'text'> {
     return {
