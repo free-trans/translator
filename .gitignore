@@ -39,3 +39,5 @@ example/.temp/*
 .eslintcache
 
 apis
+
+.env

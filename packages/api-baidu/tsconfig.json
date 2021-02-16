@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "declaration": true,
+    "skipLibCheck": true,
+    /* 给 Map 对象提供 for of 能力 */
+    "downlevelIteration": true,
+    /* 模块导入配置项 */
+    "esModuleInterop": true,
+    "baseUrl": "../..",
+    "paths": {
+      "@arvinxu/languages": ["./packages/languages/src"],
+      "@arvinxu/translator": ["./packages/translator/src"]
+    }
+  }
+}
