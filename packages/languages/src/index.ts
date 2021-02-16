@@ -123,4 +123,98 @@ const languages = [
 
 export const languageCodes = languages;
 
+export enum LanguageCodeEnum {
+  /**
+   * 英文
+   */
+  en = 'en',
+  /**
+   * 简体中文
+   */
+  'zh-CN' = 'zh-CN',
+  /**
+   * 繁体中文
+   */
+  'zh-TW' = 'zh-TW',
+  /**
+   * 日语
+   */
+  ja = 'ja',
+  /**
+   * 泰语
+   */
+  th = 'th',
+  /**
+   * 俄语
+   */
+  ru = 'ru',
+  /**
+   * 法语
+   */
+  fr = 'fr',
+  /**
+   * 葡萄牙语
+   */
+  pt = 'pt',
+  /**
+   * 德语
+   */
+  de = 'de',
+  /**
+   * 意大利语
+   */
+  it = 'it',
+  /**
+   * 韩语
+   */
+  ko = 'ko',
+  /**
+   * 西班牙语
+   */
+  es = 'es',
+  /**
+   * 阿拉伯语
+   */
+  ar = 'ar',
+  /**
+   * 芬兰语
+   */
+  fi = 'fi',
+  /**
+   * 捷克语
+   */
+  cs = 'cs',
+  /**
+   * 罗马尼亚语
+   */
+  ro = 'ro',
+  /**
+   * 瑞典语
+   */
+  sv = 'sv',
+  /**
+   * 匈牙利语
+   */
+  hu = 'hu',
+  /**
+   * 尼泊尔语
+   */
+  hi = 'hi',
+  /**
+   * 斯洛文尼亚语
+   */
+  sl = 'sl',
+
+  // TODO: 后续有待添加
+
+  //* *******//
+
+  el = 'el',
+  nl = 'nl',
+  pl = 'pl',
+  bg = 'bul',
+  et = 'est',
+  da = 'dan',
+}
+
 export default languages;
