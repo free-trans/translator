@@ -1,7 +1,7 @@
 {
   "name": "@arvinxu/languages",
   "description": "语言识别符",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "files": [
     "lib",
     "es",
