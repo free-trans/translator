@@ -3,6 +3,8 @@
   "compilerOptions": {
     "declaration": true,
     "skipLibCheck": true,
+    /* Map 对象可用 */
+    "downlevelIteration": true,
     /* 模块导入配置项 */
     "esModuleInterop": true
   }

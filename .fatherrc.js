@@ -3,5 +3,4 @@ module.exports = {
   cjs: 'babel',
   esm: 'babel',
   target: 'node',
-  extraBabelPlugins: ['add-module-exports'],
 };
