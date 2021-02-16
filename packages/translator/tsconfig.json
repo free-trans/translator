@@ -2,8 +2,9 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "declaration": true,
-    "jsx": "react-jsx",
     "skipLibCheck": true,
+    /* 给 Map 对象提供 for of 能力 */
+    "downlevelIteration": true,
     /* 模块导入配置项 */
     "esModuleInterop": true
   }

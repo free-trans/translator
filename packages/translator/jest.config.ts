@@ -1,9 +1,9 @@
 import type { Config } from '@jest/types';
 import base from '../../jest.config';
 
-const packageName = '@arvinxu/modules-bar';
+const packageName = '@arvinxu/translator';
 
-const root = '<rootDir>/packages/bar';
+const root = '<rootDir>/packages/translator';
 
 const config: Config.InitialOptions = {
   ...base,

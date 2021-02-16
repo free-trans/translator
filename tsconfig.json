@@ -17,7 +17,8 @@
     /* Alias 路径 */
     "baseUrl": ".",
     "paths": {
-      "@arvinxu/languages": ["./packages/languages/src"]
+      "@arvinxu/languages": ["./packages/languages/src"],
+      "@arvinxu/translator": ["./packages/translator/src"]
     },
     /* 类型 */
     "skipLibCheck": true
