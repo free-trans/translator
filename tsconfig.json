@@ -17,8 +17,7 @@
     /* Alias 路径 */
     "baseUrl": ".",
     "paths": {
-      "@arvinxu/modules-foo": ["./packages/foo/src"],
-      "@arvinxu/modules-bar": ["./packages/bar/src"]
+      "@arvinxu/languages": ["./packages/languages/src"]
     },
     /* 类型 */
     "skipLibCheck": true

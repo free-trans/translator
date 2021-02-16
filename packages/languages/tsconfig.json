@@ -3,6 +3,7 @@
   "compilerOptions": {
     "declaration": true,
     "jsx": "react-jsx",
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     /* 模块导入配置项 */
     "esModuleInterop": true
