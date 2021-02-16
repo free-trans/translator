@@ -29,6 +29,9 @@ jobs:
 
       - name: Test
         run: yarn test
+        env:
+          BAIDU_APP_ID: ${{ secrets.BAIDU_APP_ID }}
+          BAIDU_KEY: ${{ secrets.BAIDU_KEY }}
 
       - name: Release
         env:
