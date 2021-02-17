@@ -263,7 +263,11 @@ describe('有道翻译接口', () => {
             userAgent: '',
           },
         );
-        expect(data).toEqual(errorResult);
+        expect(data).toEqual({
+          ...errorResult,
+          code: 401,
+          message: 'UNAUTHORIZED USER',
+        });
       });
     });
   });
