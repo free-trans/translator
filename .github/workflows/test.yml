@@ -33,11 +33,11 @@ jobs:
           BAIDU_KEY: ${{ secrets.BAIDU_KEY }}
 
           # 有道配置项
-          YOUDAO_COOKIE: ${{ screts.YOUDAO_COOKIE }}
-          YOUDAO_TOKEN: ${{ screts.YOUDAO_TOKEN }}
-          YOUDAO_USER_AGENT: ${{ screts.YOUDAO_USER_AGENT }}
-          YOUDAO_APP_ID: ${{ screts.YOUDAO_APP_ID }}
-          YOUDAO_KEY: ${{ screts.YOUDAO_KEY }}
+          YOUDAO_COOKIE: ${{ secrets.YOUDAO_COOKIE }}
+          YOUDAO_TOKEN: ${{ secrets.YOUDAO_TOKEN }}
+          YOUDAO_USER_AGENT: ${{ secrets.YOUDAO_USER_AGENT }}
+          YOUDAO_APP_ID: ${{ secrets.YOUDAO_APP_ID }}
+          YOUDAO_KEY: ${{ secrets.YOUDAO_KEY }}
 
       - name: Generate coverage
         run: bash <(curl -s https://codecov.io/bash)
