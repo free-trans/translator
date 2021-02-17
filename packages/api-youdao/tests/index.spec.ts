@@ -267,4 +267,32 @@ describe('有道翻译接口', () => {
       });
     });
   });
+
+  describe('初始化方法', () => {
+    it('只入参 token 时正常', async () => {
+      const youdao = new Youdao({
+        config: {
+          token: process.env.YOUDAO_TOKEN,
+        },
+      });
+
+      const data = await youdao.translate('I love you', 'auto', 'zh-CN');
+
+      expect(data).toEqual({
+        success: true,
+        type: 'youdao',
+        text: 'I love you',
+        from: 'en',
+        to: 'zh-CN',
+        /** 原文 */
+        origin: {
+          paragraphs: ['I love you'],
+        },
+        /** 译文 */
+        trans: {
+          paragraphs: ['我爱你'],
+        },
+      });
+    }, 9000);
+  });
 });
