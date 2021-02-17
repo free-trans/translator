@@ -1,5 +1,12 @@
 # 更新日志
 
+## @arvinxu/translator-microsoft [1.0.2](https://github.com/arvinxx/translator/compare/@arvinxu/translator-microsoft@1.0.1...@arvinxu/translator-microsoft@1.0.2) (2021-02-17)
+
+
+### 🐛 修复
+
+* 修复语言固定时报错的 bug ([7c47936](https://github.com/arvinxx/translator/commit/7c47936))
+
 ## @arvinxu/translator-microsoft [1.0.1](https://github.com/arvinxx/translator/compare/@arvinxu/translator-microsoft@1.0.0...@arvinxu/translator-microsoft@1.0.1) (2021-02-17)
 
 
