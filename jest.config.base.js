@@ -4,7 +4,7 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
   verbose: true,
-  setupFiles: ['dotenv/config'],
+  setupFiles: [path.join(__dirname, './tests/setup')],
   moduleNameMapper: {
     '@arvinxu/languages': '<rootDir>/packages/languages/src',
     '@arvinxu/translator': '<rootDir>/packages/translator/src',

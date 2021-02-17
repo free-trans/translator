@@ -86,6 +86,6 @@ describe('微软翻译接口', () => {
       expect(data.success).toBeTruthy();
       expect(data.origin.paragraphs).toHaveLength(2);
       expect(data.trans.paragraphs).toHaveLength(2);
-    });
+    }, 15000);
   });
 });
