@@ -1,0 +1,43 @@
+import {
+  LanguageCode,
+  Translator,
+  TranslateQueryResult
+} from "@arvinxu/translator";
+
+import { langMap } from './langMap';
+
+
+export interface <%- engineTitled %>Config {}
+
+export class <%- engineTitled %> extends Translator<<%- engineTitled %>Config> {
+  /** Translator lang to custom lang */
+  private static readonly langMap = new Map(langMap);
+
+  /** Custom lang to translator lang */
+  private static readonly langMapReverse = new Map(
+    langMap.map(([translatorLang, lang]) => [lang, translatorLang])
+  );
+
+  protected async query(
+    text: string,
+    from: LanguageCode,
+    to: LanguageCode,
+    config: <%- engineTitled %>Config
+  ): Promise<TranslateQueryResult> {
+
+  }
+
+  readonly name = "<%- engine %>";
+
+  getSupportLanguages(): LanguageCode[] {
+    return [...<%- engineTitled %>.langMap.keys()];
+  }
+
+  // async detect(text: string): Promise<Language> {
+  // }
+
+  // async textToSpeech(text: string, lang: LanguageCode): Promise<string | null> {
+  // }
+}
+
+export default <%- engineTitled %>;

@@ -16,6 +16,8 @@
     "start": "concurrently \"yarn api:dev\" \"yarn site:dev\"",
     "build": "father-build && yarn build:webpack",
     "build:webpack": "lerna run webpack",
+    "---------  ": "",
+    "c": "yarn n scripts/create-translator",
     "---------": "",
     "prepublishOnly": "yarn build",
     "release": "multi-semantic-release",
