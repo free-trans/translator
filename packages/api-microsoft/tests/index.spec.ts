@@ -12,7 +12,7 @@ describe('微软翻译接口', () => {
   }, 5000);
 
   describe('正常调用', () => {
-    it('英翻中正常', async () => {
+    it('英翻中自动正常', async () => {
       const data = await microsoft.translate('I love you', 'auto', 'zh-CN');
 
       expect(data).toEqual({
@@ -31,6 +31,23 @@ describe('微软翻译接口', () => {
         },
       });
     }, 9000);
+
+    it('中翻英指定语言', async () => {
+      const data = await microsoft.translate('我爱你', 'zh-CN', 'en');
+      expect(data).toEqual({
+        success: true,
+        type: 'microsoft',
+        text: '我爱你',
+        from: 'zh-CN',
+        to: 'en',
+        origin: {
+          paragraphs: ['我爱你'],
+        },
+        trans: {
+          paragraphs: ['I love you'],
+        },
+      });
+    }, 20000);
 
     it('中翻英正常', async () => {
       const data = await microsoft.translate('我爱你', 'auto', 'en');

@@ -13,7 +13,7 @@ interface MicrosoftErrorResult {
 }
 type MicrosoftSuccessResult = [
   {
-    detectedLanguage: {
+    detectedLanguage?: {
       language: string;
       score: number;
     };
@@ -133,7 +133,7 @@ export class Microsoft extends Translator<MicrosoftConfig> {
         paragraphs: trans.split('\n'),
       },
       text,
-      from: Microsoft.langMapReverse.get(detectedLanguage.language) || from,
+      from: Microsoft.langMapReverse.get(detectedLanguage?.language) || from,
       to: Microsoft.langMapReverse.get(_to),
     };
   }
