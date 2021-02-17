@@ -61,4 +61,33 @@ describe('Dict Tencent', () => {
       });
     }, 5000);
   });
+
+  describe('withToken', () => {
+    it('请求正常', async () => {
+      const data = await tencent['requestWithToken'](
+        'It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included.',
+        'en',
+        'zh-CN',
+        {
+          qtk: '',
+          qtv: '',
+        },
+      );
+      expect(data).toEqual({
+        success: true,
+        from: 'en',
+        to: 'zh-CN',
+        origin: {
+          paragraphs: [
+            'It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included.',
+          ],
+        },
+        trans: {
+          paragraphs: [
+            '它主要是为JavaScript设计的，但如果包含相应的加载器，它也可以转换前端资产，如HTML、CSS和图像。',
+          ],
+        },
+      });
+    });
+  });
 });

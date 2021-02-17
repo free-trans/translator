@@ -6,10 +6,36 @@ import { langMap } from './langMap';
 import { sdkTranslate } from './sdk';
 
 export interface TencentConfig {
-  secretId: string;
-  secretKey: string;
+  secretId?: string;
+  secretKey?: string;
   region?: string;
+  qtk?: string;
+  qtv?: string;
 }
+
+export interface TencentResponse {
+  sessionUuid: string;
+  translate: {
+    errCode: number;
+    errMsg: string;
+    sessionUuid: string;
+    source: string;
+    target: string;
+    records: TencentRawResult;
+    full: boolean;
+    options: any;
+  };
+  dict: null;
+  suggest: null;
+  errCode: number;
+  errMsg: string;
+}
+
+export type TencentRawResult = {
+  sourceText: string;
+  targetText: string;
+  traceId: string;
+}[];
 
 export class Tencent extends Translator<TencentConfig> {
   /** Translator lang to custom lang */
@@ -19,6 +45,67 @@ export class Tencent extends Translator<TencentConfig> {
   private static readonly langMapReverse = new Map(
     langMap.map(([translatorLang, lang]) => [lang, translatorLang]),
   );
+
+  token: {
+    qtv: string;
+    qtk: string;
+  } = {
+    qtk: '',
+    qtv: '',
+  };
+
+  private async requestWithToken(
+    text: string,
+    from: LanguageCode,
+    to: LanguageCode,
+    config: TencentConfig,
+  ): Promise<TranslateQueryResult> {
+    this.token.qtk = config.qtk;
+    this.token.qtv = config.qtv;
+
+    const data = await this.request
+      .post<TencentResponse>('https://fanyi.qq.com/api/translate', {
+        data: {
+          sourceText: text,
+          source: from,
+          target: to,
+          qtv: this.token.qtv,
+          qtk: this.token.qtk,
+          // sessionUuid: 'translate_uuid1613547356321',
+        },
+        requestType: 'form',
+        responseType: 'json',
+        headers: {
+          Origin: 'https://fanyi.qq.com',
+          'User-Agent':
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
+        },
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+
+    // @ts-ignore
+    const { errMsg, errCode, translate } = data;
+    if (errCode !== 0) {
+      return this.getErrorResult(errCode, errMsg);
+    }
+
+    const { source, records, target } = translate;
+
+    console.log(translate);
+    return {
+      success: true,
+      from: Tencent.langMapReverse.get(source) || from,
+      to: Tencent.langMapReverse.get(target) || to,
+      origin: {
+        paragraphs: records.map((item) => item.sourceText),
+      },
+      trans: {
+        paragraphs: records.map((item) => item.targetText),
+      },
+    };
+  }
 
   /**
    * 使用 SDK 请求
@@ -33,7 +120,7 @@ export class Tencent extends Translator<TencentConfig> {
     from: LanguageCode,
     to: LanguageCode,
     config: TencentConfig,
-  ) {
+  ): Promise<TranslateQueryResult> {
     const data = await sdkTranslate(
       text,
       Tencent.langMap.get(from),
