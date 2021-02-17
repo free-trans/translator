@@ -1,0 +1,28 @@
+{
+  "name": "@arvinxu/translator-youdao",
+  "version": "1.0.0",
+  "files": [
+    "lib",
+    "es"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "scripts": {
+    "build": "father-build",
+    "test": "jest",
+    "cov": "jest --coverage",
+    "clean": "rm -rf es lib dist build coverage .umi"
+  },
+  "dependencies": {
+    "@arvinxu/translator": "1.0.1",
+    "js-sha256": "^0.9.0",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/md5": "^2.3.0"
+  }
+}

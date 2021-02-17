@@ -28,6 +28,10 @@ export enum RequestErrorCode {
    * 未授权
    */
   NOT_FOUND = 404,
+  /**
+   * 未授权
+   */
+  BAD_REQUEST = 400,
 }
 
 export interface TranslateStatus {

@@ -28,9 +28,16 @@ jobs:
       - name: test
         run: yarn test:coverage
         env:
+          # 百度配置项
           BAIDU_APP_ID: ${{ secrets.BAIDU_APP_ID }}
           BAIDU_KEY: ${{ secrets.BAIDU_KEY }}
 
+          # 有道配置项
+          YOUDAO_COOKIE: ${{ screts.YOUDAO_COOKIE }}
+          YOUDAO_TOKEN: ${{ screts.YOUDAO_TOKEN }}
+          YOUDAO_USER_AGENT: ${{ screts.YOUDAO_USER_AGENT }}
+          YOUDAO_APP_ID: ${{ screts.YOUDAO_APP_ID }}
+          YOUDAO_KEY: ${{ screts.YOUDAO_KEY }}
 
       - name: Generate coverage
         run: bash <(curl -s https://codecov.io/bash)
