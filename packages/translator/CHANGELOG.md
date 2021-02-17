@@ -1,5 +1,20 @@
 # 更新日志
 
+## @arvinxu/translator [1.1.1](https://github.com/arvinxx/translator/compare/@arvinxu/translator@1.1.0...@arvinxu/translator@1.1.1) (2021-02-17)
+
+
+### 🐛 修复
+
+* 修正模块发布时是空包的 bug ([cfb1f98](https://github.com/arvinxx/translator/commit/cfb1f98))
+
+
+
+
+
+### Dependencies
+
+* **@arvinxu/languages:** upgraded to 1.0.1
+
 # @arvinxu/translator [1.1.0](https://github.com/arvinxx/translator/compare/@arvinxu/translator@1.0.2...@arvinxu/translator@1.1.0) (2021-02-17)
 
 
