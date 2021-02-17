@@ -1,5 +1,25 @@
 # 更新日志
 
+## @arvinxu/translator-youdao [1.0.1](https://github.com/arvinxx/translator/compare/@arvinxu/translator-youdao@1.0.0...@arvinxu/translator-youdao@1.0.1) (2021-02-17)
+
+
+### 🎫 杂项
+
+* 调整模块依赖 ([441b4b5](https://github.com/arvinxx/translator/commit/441b4b5))
+
+
+### 🐛 修复
+
+* 修正模块发布时是空包的 bug ([cfb1f98](https://github.com/arvinxx/translator/commit/cfb1f98))
+
+
+
+
+
+### Dependencies
+
+* **@arvinxu/translator:** upgraded to 1.1.1
+
 # @arvinxu/translator-youdao 1.0.0 (2021-02-17)
 
 
