@@ -1,5 +1,12 @@
 # 更新日志
 
+# @arvinxu/translator [1.1.0](https://github.com/arvinxx/translator/compare/@arvinxu/translator@1.0.2...@arvinxu/translator@1.1.0) (2021-02-17)
+
+
+### ✨ 新特性
+
+* 添加有道 API ([364f8e3](https://github.com/arvinxx/translator/commit/364f8e3))
+
 ## @arvinxu/translator [1.0.2](https://github.com/arvinxx/translator/compare/@arvinxu/translator@1.0.1...@arvinxu/translator@1.0.2) (2021-02-17)
 
 
