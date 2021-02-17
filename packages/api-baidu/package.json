@@ -18,7 +18,7 @@
     "clean": "rm -rf es lib dist build coverage .umi"
   },
   "dependencies": {
-    "@arvinxu/translator": "1.1.0",
+    "@arvinxu/translator": "^1.1.0",
     "md5": "^2.3.0"
   },
   "devDependencies": {
