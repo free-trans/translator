@@ -1,6 +1,6 @@
 {
   "name": "@arvinxu/translator-baidu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "lib",
     "es"
@@ -18,7 +18,7 @@
     "clean": "rm -rf es lib dist build coverage .umi"
   },
   "dependencies": {
-    "@arvinxu/translator": "1.0.1",
+    "@arvinxu/translator": "1.0.2",
     "md5": "^2.3.0"
   },
   "devDependencies": {
