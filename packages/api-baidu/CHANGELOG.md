@@ -1,5 +1,20 @@
 # 更新日志
 
+## @arvinxu/translator-baidu [1.0.2](https://github.com/arvinxx/translator/compare/@arvinxu/translator-baidu@1.0.1...@arvinxu/translator-baidu@1.0.2) (2021-02-17)
+
+
+### 📝 文档
+
+* 优化说明文档 ([9c5bd40](https://github.com/arvinxx/translator/commit/9c5bd40))
+
+
+
+
+
+### Dependencies
+
+* **@arvinxu/translator:** upgraded to 1.1.0
+
 ## @arvinxu/translator-baidu [1.0.1](https://github.com/arvinxx/translator/compare/@arvinxu/translator-baidu@1.0.0...@arvinxu/translator-baidu@1.0.1) (2021-02-17)
 
 
