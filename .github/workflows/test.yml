@@ -39,5 +39,9 @@ jobs:
           YOUDAO_APP_ID: ${{ secrets.YOUDAO_APP_ID }}
           YOUDAO_KEY: ${{ secrets.YOUDAO_KEY }}
 
+          # 腾讯配置项
+          TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
+          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
+
       - name: Generate coverage
         run: bash <(curl -s https://codecov.io/bash)

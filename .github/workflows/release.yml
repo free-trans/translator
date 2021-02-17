@@ -41,6 +41,10 @@ jobs:
           YOUDAO_APP_ID: ${{ secrets.YOUDAO_APP_ID }}
           YOUDAO_KEY: ${{ secrets.YOUDAO_KEY }}
 
+          # 腾讯配置项
+          TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
+          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
+
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
