@@ -3,15 +3,13 @@ import { RequestErrorCode, Translator } from '@arvinxu/translator';
 import { langMap } from './langMap';
 import { signAPI, signKey } from './sign';
 
-interface YoudaoPartialConfig {
+export interface YoudaoConfig {
+  appKey?: string;
+  key?: string;
+  onlyAPI?: boolean;
   token?: string;
   userAgent?: string;
   cookie?: string;
-}
-export interface YoudaoConfig extends YoudaoPartialConfig {
-  appKey: string;
-  key: string;
-  onlyAPI?: boolean;
 }
 
 interface YoudaoTranslateResult {
@@ -43,8 +41,6 @@ export class Youdao extends Translator<YoudaoConfig> {
     langMap.map(([translatorLang, lang]) => [lang, translatorLang]),
   );
 
-  config: YoudaoConfig;
-
   /**
    * 不用 token 的请求方法
    * @param text
@@ -57,7 +53,7 @@ export class Youdao extends Translator<YoudaoConfig> {
     text: string,
     from: LanguageCode,
     to: LanguageCode,
-    config: Partial<YoudaoConfig>,
+    config: YoudaoConfig,
   ) {
     const baseURL = 'http://fanyi.youdao.com';
     const url = `${baseURL}/translate_o?smartresult=dict&smartresult=rule`;
@@ -130,7 +126,7 @@ export class Youdao extends Translator<YoudaoConfig> {
    * @param config
    * @private
    */
-  private async fetchWithWithoutToken(
+  private async fetchWithoutToken(
     text: string,
     from: LanguageCode,
     to: LanguageCode,
@@ -204,7 +200,7 @@ export class Youdao extends Translator<YoudaoConfig> {
     const { appKey, key, onlyAPI } = finalConfig;
 
     if (onlyAPI) {
-      return await this.fetchWithWithoutToken(text, from, to, { appKey, key });
+      return await this.fetchWithoutToken(text, from, to, { appKey, key });
     }
 
     // 只使用 API
@@ -214,7 +210,7 @@ export class Youdao extends Translator<YoudaoConfig> {
 
     // 如果有 appKey 和 key 则尝试发送 api 请求
     if (appKey && key) {
-      return await this.fetchWithWithoutToken(text, from, to, {
+      return await this.fetchWithoutToken(text, from, to, {
         appKey,
         key,
       });
