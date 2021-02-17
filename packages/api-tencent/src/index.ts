@@ -46,7 +46,7 @@ export class Tencent extends Translator<TencentConfig> {
     langMap.map(([translatorLang, lang]) => [lang, translatorLang]),
   );
 
-  token: {
+  private token: {
     qtv: string;
     qtk: string;
   } = {
@@ -63,16 +63,17 @@ export class Tencent extends Translator<TencentConfig> {
     this.token.qtk = config.qtk;
     this.token.qtv = config.qtv;
 
-    const data = await this.request
-      .post<TencentResponse>('https://fanyi.qq.com/api/translate', {
-        data: {
-          sourceText: text,
-          source: from,
-          target: to,
-          qtv: this.token.qtv,
-          qtk: this.token.qtk,
-          // sessionUuid: 'translate_uuid1613547356321',
-        },
+    const data = {
+      sourceText: text,
+      source: from,
+      target: to,
+      qtv: this.token.qtv,
+      qtk: this.token.qtk,
+    };
+    const res = await this.request.post<TencentResponse>(
+      'https://fanyi.qq.com/api/translate',
+      {
+        data,
         requestType: 'form',
         responseType: 'json',
         headers: {
@@ -80,13 +81,10 @@ export class Tencent extends Translator<TencentConfig> {
           'User-Agent':
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36',
         },
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+      },
+    );
 
-    // @ts-ignore
-    const { errMsg, errCode, translate } = data;
+    const { errMsg, errCode, translate } = res;
     if (errCode !== 0) {
       return this.getErrorResult(errCode, errMsg);
     }
