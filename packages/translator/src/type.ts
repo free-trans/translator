@@ -12,8 +12,22 @@ export interface TranslatorOptions<Config extends {}> {
 }
 
 export enum RequestErrorCode {
+  /**
+   * 请求过快
+   */
   LIMITED = 429,
+  /**
+   * 未联网
+   */
+  UNCONNECTED = 500,
+  /**
+   * 未授权
+   */
   UNAUTHORIZED = 401,
+  /**
+   * 未授权
+   */
+  NOT_FOUND = 404,
 }
 
 export interface TranslateStatus {

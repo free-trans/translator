@@ -6,14 +6,15 @@ describe(' Google 翻译引擎', () => {
   // let retry = 10;
   // request.interceptors.response.use(
   //   async (error): Promise<any> => {
+  //     console.log(error);
   //     if (retry) {
+  //       retry -= 1;
   //       await new Promise((resolve): void => {
   //         setTimeout(resolve, 500);
   //       });
   //
-  //       return request(error.config);
+  //       return request(error.url, error.config);
   //     }
-  //     retry -= 1;
   //
   //     return Promise.reject(error);
   //   },

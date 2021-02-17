@@ -1,5 +1,5 @@
 import type { LanguageCode, TranslateQueryResult } from '@arvinxu/translator';
-import { Translator } from '@arvinxu/translator';
+import { RequestErrorCode, Translator } from '@arvinxu/translator';
 
 import { langMap } from './langMap';
 import { fetchScheduled, getTK } from './api';
@@ -115,11 +115,11 @@ export class Google extends Translator<GoogleConfig> {
     }
 
     if (!result) {
-      throw new Error('NETWORK_ERROR');
+      return this.getErrorResult(RequestErrorCode.UNCONNECTED, 'NETWORK ERROR');
     }
 
     if (!result.data[0] || result.data[0].length <= 0) {
-      throw new Error('API_SERVER_ERROR');
+      return this.getErrorResult(RequestErrorCode.NOT_FOUND, 'NO QUERY RESULT');
     }
 
     const transText = result.data[0]
@@ -151,6 +151,7 @@ export class Google extends Translator<GoogleConfig> {
     try {
       return (await this.translate(text, 'auto', 'zh-CN')).from;
     } catch (e) {
+      console.log(e);
       return 'auto';
     }
   }
