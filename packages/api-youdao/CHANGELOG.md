@@ -1,5 +1,17 @@
 # 更新日志
 
+## @arvinxu/translator-youdao [1.0.2](https://github.com/arvinxx/translator/compare/@arvinxu/translator-youdao@1.0.1...@arvinxu/translator-youdao@1.0.2) (2021-02-17)
+
+
+### ✅ 测试
+
+* 修正测试 ([66f777a](https://github.com/arvinxx/translator/commit/66f777a))
+
+
+### 🐛 修复
+
+* 修正入参时需要传入的参数信息 ([5080858](https://github.com/arvinxx/translator/commit/5080858))
+
 ## @arvinxu/translator-youdao [1.0.1](https://github.com/arvinxx/translator/compare/@arvinxu/translator-youdao@1.0.0...@arvinxu/translator-youdao@1.0.1) (2021-02-17)
 
 
