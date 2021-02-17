@@ -1,5 +1,25 @@
 # 更新日志
 
+# @arvinxu/translator-youdao 1.0.0 (2021-02-17)
+
+
+### ✅ 测试
+
+* 补充有道测试案例 ([e3d22f7](https://github.com/arvinxx/translator/commit/e3d22f7))
+
+
+### ✨ 新特性
+
+* 添加有道 API ([364f8e3](https://github.com/arvinxx/translator/commit/364f8e3))
+
+
+
+
+
+### Dependencies
+
+* **@arvinxu/translator:** upgraded to 1.1.0
+
 # @arvinxu/translator-baidu 1.0.0 (2021-02-16)
 
 ### ✅ 测试
