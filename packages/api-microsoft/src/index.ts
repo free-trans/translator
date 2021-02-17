@@ -147,7 +147,6 @@ export class Microsoft extends Translator<MicrosoftConfig> {
         },
       },
     );
-    console.log('token 失效');
 
     if (typeof token === 'string') {
       this.token = token;
