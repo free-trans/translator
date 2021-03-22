@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Google } from '../src';
 // import request from 'umi-request';
 
