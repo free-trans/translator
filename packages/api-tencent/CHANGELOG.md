@@ -1,5 +1,12 @@
 # 更新日志
 
+# @arvinxu/translator-tencent [1.1.0](https://github.com/arvinxx/translator/compare/@arvinxu/translator-tencent@1.0.1...@arvinxu/translator-tencent@1.1.0) (2021-03-22)
+
+
+### ✨ 新特性
+
+* 补充腾讯 API ([9c31064](https://github.com/arvinxx/translator/commit/9c31064))
+
 ## @arvinxu/translator-tencent [1.0.1](https://github.com/arvinxx/translator/compare/@arvinxu/translator-tencent@1.0.0...@arvinxu/translator-tencent@1.0.1) (2021-02-17)
 
 
