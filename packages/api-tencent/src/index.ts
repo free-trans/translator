@@ -77,14 +77,7 @@ export class Tencent extends Translator<TencentConfig> {
       return await this.requestWithSDK(text, from, to, config);
     }
 
-    const data = await this.requestWithoutSDK(text, from, to);
-
-    // 如果没有翻译结果 说明 token 过期
-    if (!data.trans.paragraphs.join('')) {
-      await this.fetchToken();
-      return await this.requestWithoutSDK(text, from, to);
-    }
-    return data;
+    return await this.requestWithoutSDK(text, from, to);
   }
 
   /**
@@ -99,9 +92,7 @@ export class Tencent extends Translator<TencentConfig> {
     from: LanguageCode,
     to: LanguageCode,
   ): Promise<TranslateQueryResult> {
-    if (!this.qtk || !this.qtv) {
-      await this.fetchToken();
-    }
+    await this.fetchToken();
 
     const { translate } = await this.request.post<TencentResponseResult>(
       'https://fanyi.qq.com/api/translate',
