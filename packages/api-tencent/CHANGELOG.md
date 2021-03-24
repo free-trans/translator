@@ -1,5 +1,12 @@
 # 更新日志
 
+## @arvinxu/translator-tencent [1.1.1](https://github.com/arvinxx/translator/compare/@arvinxu/translator-tencent@1.1.0...@arvinxu/translator-tencent@1.1.1) (2021-03-24)
+
+
+### 🐛 修复
+
+* 修复腾讯引擎不出文字的 bug ([671b30f](https://github.com/arvinxx/translator/commit/671b30f))
+
 # @arvinxu/translator-tencent [1.1.0](https://github.com/arvinxx/translator/compare/@arvinxu/translator-tencent@1.0.1...@arvinxu/translator-tencent@1.1.0) (2021-03-22)
 
 
