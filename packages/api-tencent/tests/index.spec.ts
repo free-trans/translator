@@ -26,7 +26,7 @@ describe('Tencent', () => {
         paragraphs: ['我爱你'],
       },
     });
-  }, 10000);
+  });
 
   it('should get multi paragraphs', async () => {
     const text = '你好\n我爱你';
@@ -47,7 +47,7 @@ describe('Tencent', () => {
         paragraphs: ['Hello.', 'I love you'],
       },
     });
-  }, 10000);
+  });
 
   it('should get supported languages', () => {
     const result = tencent.getSupportLanguages();
@@ -55,7 +55,7 @@ describe('Tencent', () => {
     expect(result).toContain('auto');
     expect(result).toContain('zh-CN');
     expect(result).toContain('en');
-  }, 10000);
+  });
 
   describe('withSDK', () => {
     it('should translate successfully', async () => {
@@ -80,7 +80,7 @@ describe('Tencent', () => {
           paragraphs: ['我爱你'],
         },
       });
-    }, 5000);
+    });
   });
 
   describe('withoutSDK', () => {
