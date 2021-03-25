@@ -4,7 +4,8 @@ const config = {
   secretId: process.env.TENCENT_SECRET_ID,
   secretKey: process.env.TENCENT_SECRET_KEY,
 };
-describe('Dict Tencent', () => {
+
+describe('Tencent', () => {
   const tencent = new Tencent({ config });
 
   it('should translate successfully', async () => {
@@ -26,6 +27,27 @@ describe('Dict Tencent', () => {
       },
     });
   }, 5000);
+
+  it('should get multi paragraphs', async () => {
+    const text = '你好\n我爱你';
+    const result = await tencent.translate(text, 'zh-CN', 'en');
+
+    expect(result).toEqual({
+      success: true,
+      type: 'tencent',
+      text,
+      to: 'en',
+      from: 'zh-CN',
+      /** 原文 */
+      origin: {
+        paragraphs: ['你好', '我爱你'],
+      },
+      /** 译文 */
+      trans: {
+        paragraphs: ['Hello.', 'I love you'],
+      },
+    });
+  });
 
   it('should get supported languages', () => {
     const result = tencent.getSupportLanguages();
@@ -122,6 +144,30 @@ describe('Dict Tencent', () => {
         /** 译文 */
         trans: {
           paragraphs: ['我爱你'],
+        },
+      });
+    });
+    it('should get one paragraph', async () => {
+      const text =
+        'Major retailers like Target and Ace Hardware follow the same pattern. Search is at the top, with large features (sales promotions) below. Both sites support browse with grids of cards.';
+      const result = await tencent['requestWithoutSDK'](text, 'en', 'zh-CN');
+
+      expect(result).toEqual({
+        success: true,
+        text,
+        from: 'en',
+        to: 'zh-CN',
+        /** 原文 */
+        origin: {
+          paragraphs: [
+            'Major retailers like Target and Ace Hardware follow the same pattern.Search is at the top, with large features (sales promotions) below.Both sites support browse with grids of cards.',
+          ],
+        },
+        /** 译文 */
+        trans: {
+          paragraphs: [
+            '塔吉特(Target)和王牌硬件(Ace Hardware)等大型零售商也遵循同样的模式。搜索在顶部，下面是大功能(促销)。这两个网站都支持使用卡片网格进行浏览。',
+          ],
         },
       });
     });

@@ -114,16 +114,40 @@ export class Tencent extends Translator<TencentConfig> {
       },
     );
 
+    const formatResult = (raw: string[]) => {
+      // 腾讯翻译器的结果结构如下
+      //   [
+      //   {
+      //     sourceText: '你好',
+      //     targetText: 'Hello. ',
+      //   },
+      //     {
+      //       sourceText: '\n',
+      //       targetText: '\n ',
+      //     },
+      //     {
+      //       sourceText: '我爱你',
+      //       targetText: 'I love you',
+      //     },
+      //   ];
+      // 因此采用合并然后按 \n 切分的思路处理段落问题
+
+      return raw
+        .join('')
+        .split('\n')
+        .map((i) => i.trim());
+    };
+
     return {
       success: true,
       from: Tencent.langMapReverse.get(translate.source) || from,
       to: Tencent.langMapReverse.get(translate.target) || to,
       text,
       trans: {
-        paragraphs: translate.records.map((r) => r.targetText),
+        paragraphs: formatResult(translate.records.map((r) => r.targetText)),
       },
       origin: {
-        paragraphs: translate.records.map((r) => r.sourceText),
+        paragraphs: formatResult(translate.records.map((r) => r.sourceText)),
       },
     };
   }
