@@ -1,5 +1,18 @@
 # 更新日志
 
+## @arvinxu/translator-tencent [1.1.2](https://github.com/arvinxx/translator/compare/@arvinxu/translator-tencent@1.1.1...@arvinxu/translator-tencent@1.1.2) (2021-03-25)
+
+
+### ✅ 测试
+
+* 修正测试 timeout 时间 ([6676357](https://github.com/arvinxx/translator/commit/6676357))
+* 修正测试 timeout 时间 ([97ee25e](https://github.com/arvinxx/translator/commit/97ee25e))
+
+
+### 🐛 修复
+
+* 修复腾讯翻译器段落翻译有问题的 bug ([eee1e5a](https://github.com/arvinxx/translator/commit/eee1e5a))
+
 ## @arvinxu/translator-tencent [1.1.1](https://github.com/arvinxx/translator/compare/@arvinxu/translator-tencent@1.1.0...@arvinxu/translator-tencent@1.1.1) (2021-03-24)
 
 
