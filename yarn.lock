@@ -3892,6 +3892,11 @@
   resolved "https://registry.npm.taobao.org/@types/node/download/@types/node-14.0.23.tgz?cache=0&sync_timestamp=1613331713665&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.0.23.tgz#676fa0883450ed9da0bb24156213636290892806"
   integrity sha1-Z2+giDRQ7Z2guyQVYhNjYpCJKAY=
 
+"@types/node@^14.14.28":
+  version "14.14.37"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
+  integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
   resolved "https://registry.npm.taobao.org/@types/normalize-package-data/download/@types/normalize-package-data-2.4.0.tgz?cache=0&sync_timestamp=1613379433112&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnormalize-package-data%2Fdownload%2F%40types%2Fnormalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
@@ -4052,6 +4057,13 @@
   integrity sha1-udA/CQ7OJjZxiY1Xu3uwBwI6wZ8=
   dependencies:
     "@types/glob" "*"
+    "@types/node" "*"
+
+"@types/sax@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@types/sax/-/sax-1.2.1.tgz#e0248be936ece791a82db1a57f3fb5f7c87e8172"
+  integrity sha512-dqYdvN7Sbw8QT/0Ci5rhjE4/iCMJEM0Y9rHpCu+gGXD9Lwbz28t6HI2yegsB6BoV1sShRMU6lAmAcgRjmFy7LA==
+  dependencies:
     "@types/node" "*"
 
 "@types/semver@7.3.4":
@@ -4652,10 +4664,10 @@
     umi-webpack-bundle-analyzer "3.6.0"
     zlib "1.0.5"
 
-"@umijs/preset-dumi@1.1.4":
-  version "1.1.4"
-  resolved "https://registry.npm.taobao.org/@umijs/preset-dumi/download/@umijs/preset-dumi-1.1.4.tgz#6e06a203f6badc329629e6a243fea721dc8e5e87"
-  integrity sha1-bgaiA/a63DKWKeaiQ/6nIdyOXoc=
+"@umijs/preset-dumi@1.1.12":
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/@umijs/preset-dumi/-/preset-dumi-1.1.12.tgz#7815b03898c71854ae6237f63a62c679a769c38b"
+  integrity sha512-ZUYW9J6Jj2uOx++QQldr9vzCJ9dUSPAvuaaHNijMSLgoo65UWFBc+TAqhpZq3bq8DUHfnLIYNS83TE4y+fB5uA==
   dependencies:
     "@babel/core" "^7.7.2"
     "@babel/generator" "^7.7.2"
@@ -4671,7 +4683,7 @@
     copy-text-to-clipboard "^2.2.0"
     deepmerge "^4.2.2"
     dumi-assets-types "1.0.0"
-    dumi-theme-default "1.0.4"
+    dumi-theme-default "1.0.12"
     enhanced-resolve "^4.1.1"
     github-slugger "^1.3.0"
     hast-util-has-property "^1.0.4"
@@ -4694,7 +4706,9 @@
     remark-parse "^9.0.0"
     remark-rehype "^8.0.0"
     remark-stringify "^9.0.0"
+    sitemap "^6.3.3"
     slash2 "^2.0.0"
+    terser "^5.5.1"
     unified "^8.4.1"
     unist-util-visit "^2.0.1"
     unist-util-visit-parents "^3.0.1"
@@ -5525,6 +5539,11 @@ arg@^4.1.0, arg@^4.1.3:
   version "4.1.3"
   resolved "https://registry.npm.taobao.org/arg/download/arg-4.1.3.tgz?cache=0&sync_timestamp=1605576950209&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Farg%2Fdownload%2Farg-4.1.3.tgz#269fc7ad5b8e42cb63c896d5666017261c144089"
   integrity sha1-Jp/HrVuOQstjyJbVZmAXJhwUQIk=
+
+arg@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/arg/-/arg-5.0.0.tgz#a20e2bb5710e82950a516b3f933fee5ed478be90"
+  integrity sha512-4P8Zm2H+BRS+c/xX1LrHw0qKpEhdlZjLCgWy+d78T9vqa2Z2SiD2wMrYuWIAFy5IZUD7nnNXroRttz+0RzlrzQ==
 
 argparse@^1.0.7:
   version "1.0.10"
@@ -8624,21 +8643,21 @@ dumi-assets-types@1.0.0:
   resolved "https://registry.npm.taobao.org/dumi-assets-types/download/dumi-assets-types-1.0.0.tgz#d5368cb11045b203bf1ef1080e553b2287a2ec81"
   integrity sha1-1TaMsRBFsgO/HvEIDlU7Ioei7IE=
 
-dumi-theme-default@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npm.taobao.org/dumi-theme-default/download/dumi-theme-default-1.0.4.tgz#b7cb18c873c898fc9dd743763397cea7eccac7ab"
-  integrity sha1-t8sYyHPImPyd10N2M5fOp+zKx6s=
+dumi-theme-default@1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/dumi-theme-default/-/dumi-theme-default-1.0.12.tgz#9a79ffa66843b8b187975125b0f8c3277fae90b6"
+  integrity sha512-iZdIE3y7kpWbITT7/DEPTsg0nPusxuH/Yi/6uoNheesh2XWillDhJ8mQ/NNlSk2y853mp5/Q77APDlxVeiIsgA==
   dependencies:
     prism-react-renderer "^1.1.1"
     prismjs "^1.21.0"
     rc-tabs "^11.7.1"
 
 dumi@^1.1.0:
-  version "1.1.4"
-  resolved "https://registry.npm.taobao.org/dumi/download/dumi-1.1.4.tgz#5cf40bb90b8d6fa6c69b619d7e791f19ce8705a8"
-  integrity sha1-XPQLuQuNb6bGm2GdfnkfGc6HBag=
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/dumi/-/dumi-1.1.12.tgz#8c63a2d0ad168f0ae5f88033a53d2aaa8af532d9"
+  integrity sha512-8cElaaDbuh/4VqY4IZhi3FBFoyhneFJgTZvSBufFMRgQq0WksjRGC/o9xxJnbJI2Pcn0vENQ14NPKYQVITnKNg==
   dependencies:
-    "@umijs/preset-dumi" "1.1.4"
+    "@umijs/preset-dumi" "1.1.12"
     umi "^3.0.0"
 
 duplexer2@0.0.2:
@@ -19742,7 +19761,7 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sax@~1.2.4:
+sax@^1.2.4, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.npm.taobao.org/sax/download/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha1-KBYjTiN4vdxOU1T6tcqold9xANk=
@@ -20152,6 +20171,16 @@ sisteransi@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npm.taobao.org/sisteransi/download/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha1-E01oEpd1ZDfMBcoBNw06elcQde0=
+
+sitemap@^6.3.3:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-6.4.0.tgz#b4bc4edf36de742405a7572bc3e467ba484b852e"
+  integrity sha512-DoPKNc2/apQZTUnfiOONWctwq7s6dZVspxAZe2VPMNtoqNq7HgXRvlRnbIpKjf+8+piQdWncwcy+YhhTGY5USQ==
+  dependencies:
+    "@types/node" "^14.14.28"
+    "@types/sax" "^1.2.1"
+    arg "^5.0.0"
+    sax "^1.2.4"
 
 slash2@2.0.0, slash2@^2.0.0:
   version "2.0.0"
@@ -21348,6 +21377,15 @@ terser@^5.0.0, terser@^5.3.4:
   version "5.6.0"
   resolved "https://registry.npm.taobao.org/terser/download/terser-5.6.0.tgz#138cdf21c5e3100b1b3ddfddf720962f88badcd2"
   integrity sha1-E4zfIcXjEAsbPd/d9yCWL4i63NI=
+  dependencies:
+    commander "^2.20.0"
+    source-map "~0.7.2"
+    source-map-support "~0.5.19"
+
+terser@^5.5.1:
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-5.6.1.tgz#a48eeac5300c0a09b36854bf90d9c26fb201973c"
+  integrity sha512-yv9YLFQQ+3ZqgWCUk+pvNJwgUTdlIxUk1WTN+RnaFJe2L7ipG2csPT0ra2XRm7Cs8cxN7QXmK1rFzEwYEQkzXw==
   dependencies:
     commander "^2.20.0"
     source-map "~0.7.2"
