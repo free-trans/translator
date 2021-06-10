@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "@arvinxu/translator": "1.1.1",
-    "tencentcloud-sdk-nodejs": "^3.0.268"
+    "tencentcloud-sdk-nodejs": "^4.0.142"
   }
 }
