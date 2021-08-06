@@ -2643,7 +2643,7 @@
     npmlog "^4.1.2"
     upath "^1.2.0"
 
-"@lerna/project@3.21.0":
+"@lerna/project@3.21.0", "@lerna/project@^3.21.0":
   version "3.21.0"
   resolved "https://registry.npm.taobao.org/@lerna/project/download/@lerna/project-3.21.0.tgz#5d784d2d10c561a00f20320bcdb040997c10502d"
   integrity sha1-XXhNLRDFYaAPIDILzbBAmXwQUC0=
@@ -9800,9 +9800,9 @@ fastq@^1.6.0:
     reusify "^1.0.4"
 
 father-build@^1.18.1:
-  version "1.19.1"
-  resolved "https://registry.npm.taobao.org/father-build/download/father-build-1.19.1.tgz#6ca75c2c7b80836e418ba2144db4414681b593a8"
-  integrity sha1-bKdcLHuAg25Bi6IUTbRBRoG1k6g=
+  version "1.19.7"
+  resolved "https://registry.yarnpkg.com/father-build/-/father-build-1.19.7.tgz#c28686140ca02c86104a0e3826b347425f52a8fd"
+  integrity sha512-FpQhVMQVpxPkplKfTQvL6vxdfeIc2HQHdNcXPUTQTrYxfVaYm8l+z6MQ5sK8E3SqsZ8JlbCSmwk4H9pL2hgVog==
   dependencies:
     "@babel/core" "7.12.3"
     "@babel/plugin-proposal-class-properties" "7.12.1"
@@ -9819,6 +9819,7 @@ father-build@^1.18.1:
     "@babel/preset-react" "7.12.1"
     "@babel/preset-typescript" "7.12.1"
     "@babel/register" "7.12.1"
+    "@lerna/project" "^3.21.0"
     "@rollup/plugin-babel" "5.2.1"
     "@rollup/plugin-commonjs" "16.0.0"
     "@rollup/plugin-inject" "4.0.2"
@@ -9840,7 +9841,7 @@ father-build@^1.18.1:
     gulp-typescript "5.0.1"
     less "3.9.0"
     less-plugin-npm-import "2.1.0"
-    lodash "4.17.19"
+    lodash "4.17.21"
     rimraf "2.6.3"
     rollup "2.33.3"
     rollup-plugin-postcss "3.1.8"
@@ -14232,15 +14233,15 @@ lodash.zip@^4.2.0:
   resolved "https://registry.npm.taobao.org/lodash.zip/download/lodash.zip-4.2.0.tgz#ec6662e4896408ed4ab6c542a3990b72cc080020"
   integrity sha1-7GZi5IlkCO1KtsVCo5kLcswIACA=
 
-lodash@4.17.19:
-  version "4.17.19"
-  resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.19.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
-  integrity sha1-5I3e2+MLMyF4PFtDAfvTU7weSks=
-
-lodash@4.17.20, lodash@4.x, "lodash@>=3.5 <5", lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1:
+lodash@4.17.20:
   version "4.17.20"
   resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.20.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha1-tEqbYpe8tpjxxRo1RaKzs2jVnFI=
+
+lodash@4.17.21, lodash@4.x, "lodash@>=3.5 <5", lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^2.0.0, log-symbols@^2.2.0:
   version "2.2.0"
