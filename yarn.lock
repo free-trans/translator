@@ -265,10 +265,10 @@
   dependencies:
     "@babel/types" "^7.12.13"
 
-"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13", "@babel/helper-plugin-utils@^7.8.0", "@babel/helper-plugin-utils@^7.8.3":
-  version "7.12.13"
-  resolved "https://registry.npm.taobao.org/@babel/helper-plugin-utils/download/@babel/helper-plugin-utils-7.12.13.tgz?cache=0&sync_timestamp=1612314681809&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fhelper-plugin-utils%2Fdownload%2F%40babel%2Fhelper-plugin-utils-7.12.13.tgz#174254d0f2424d8aefb4dd48057511247b0a9eeb"
-  integrity sha1-F0JU0PJCTYrvtN1IBXURJHsKnus=
+"@babel/helper-plugin-utils@^7.0.0", "@babel/helper-plugin-utils@^7.10.4", "@babel/helper-plugin-utils@^7.12.13", "@babel/helper-plugin-utils@^7.16.5", "@babel/helper-plugin-utils@^7.8.0", "@babel/helper-plugin-utils@^7.8.3":
+  version "7.16.5"
+  resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.16.5.tgz#afe37a45f39fce44a3d50a7958129ea5b1a5c074"
+  integrity sha512-59KHWHXxVA9K4HNF4sbHCf+eJeFe0Te/ZFGqBT4OjXhrwvA04sGfaEGsVTdsjoszq0YTP49RC9UKe5g8uN2RwQ==
 
 "@babel/helper-remap-async-to-generator@^7.12.13":
   version "7.12.13"
@@ -603,12 +603,12 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.3"
 
-"@babel/plugin-syntax-flow@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.npm.taobao.org/@babel/plugin-syntax-flow/download/@babel/plugin-syntax-flow-7.12.13.tgz#5df9962503c0a9c918381c929d51d4d6949e7e86"
-  integrity sha1-XfmWJQPAqckYOBySnVHU1pSefoY=
+"@babel/plugin-syntax-flow@^7.12.13", "@babel/plugin-syntax-flow@^7.16.5":
+  version "7.16.5"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-flow/-/plugin-syntax-flow-7.16.5.tgz#ca0d85e12d71b825b4e9fd1f8d29b64acdf1b46e"
+  integrity sha512-Nrx+7EAJx1BieBQseZa2pavVH2Rp7hADK2xn7coYqVbWRu9C2OFizYcsKo6TrrqJkJl+qF/+Qqzrk/+XDu4GnA==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.12.13"
+    "@babel/helper-plugin-utils" "^7.16.5"
 
 "@babel/plugin-syntax-function-bind@^7.12.1":
   version "7.12.13"
@@ -796,12 +796,12 @@
     "@babel/helper-plugin-utils" "^7.12.13"
 
 "@babel/plugin-transform-flow-strip-types@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.npm.taobao.org/@babel/plugin-transform-flow-strip-types/download/@babel/plugin-transform-flow-strip-types-7.12.13.tgz#b439c43116dc60fb45b7efd2e1db91897b7c8f4b"
-  integrity sha1-tDnEMRbcYPtFt+/S4duRiXt8j0s=
+  version "7.16.5"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.16.5.tgz#8ceb65ab6ca4a349e04d1887e2470a5bfe8f046f"
+  integrity sha512-skE02E/MptkZdBS4HwoRhjWXqeKQj0BWKEAPfPC+8R4/f6bjQqQ9Nftv/+HkxWwnVxh/E2NV9TNfzLN5H/oiBw==
   dependencies:
-    "@babel/helper-plugin-utils" "^7.12.13"
-    "@babel/plugin-syntax-flow" "^7.12.13"
+    "@babel/helper-plugin-utils" "^7.16.5"
+    "@babel/plugin-syntax-flow" "^7.16.5"
 
 "@babel/plugin-transform-for-of@^7.12.1", "@babel/plugin-transform-for-of@^7.12.13":
   version "7.12.13"
