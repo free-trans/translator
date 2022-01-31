@@ -102,7 +102,7 @@
     "multi-semantic-release": "^2.6.0",
     "onchange": "^7.1.0",
     "prettier": "^2.1.2",
-    "semantic-release": "^17.3.7",
+    "semantic-release": "^19.0.2",
     "serve": "^11.3.2",
     "stylelint": "^13.0.0",
     "terser-webpack-plugin": "^3.0.2",
