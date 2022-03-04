@@ -1,0 +1,20 @@
+{
+  "name": "@arvinxu/translator-sogou",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "father-build",
+    "test": "jest",
+    "cov": "jest --coverage",
+    "clean": "rm -rf es lib dist build coverage .umi"
+  },
+  "dependencies": {
+    "@arvinxu/translator": "1.1.0"
+  }
+}
