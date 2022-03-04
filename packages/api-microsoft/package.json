@@ -1,6 +1,6 @@
 {
   "name": "@arvinxu/translator-microsoft",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "files": [
     "lib",
     "es"
@@ -15,9 +15,10 @@
     "build": "father-build",
     "test": "jest",
     "cov": "jest --coverage",
+    "prepublishOnly": "yarn build",
     "clean": "rm -rf es lib dist build coverage .umi"
   },
   "dependencies": {
-    "@arvinxu/translator": "1.1.0"
+    "@arvinxu/translator": "1.1.1"
   }
 }

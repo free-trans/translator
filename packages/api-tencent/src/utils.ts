@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export const decodeHTMLEntities = (text: string): string =>
   text.replace(/&([^;]+);/gm, (match, entity) => {
     switch (entity) {

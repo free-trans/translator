@@ -58,6 +58,12 @@ export class Youdao extends Translator<YoudaoConfig> {
     const baseURL = 'http://fanyi.youdao.com';
     const url = `${baseURL}/translate_o?smartresult=dict&smartresult=rule`;
 
+    if (!config.token) {
+      return this.getErrorResult(
+        RequestErrorCode.UNAUTHORIZED,
+        'UNAUTHORIZED USER',
+      );
+    }
     const sign = signKey(text, config.token, config.userAgent); // 签名
 
     const data = {
@@ -79,7 +85,8 @@ export class Youdao extends Translator<YoudaoConfig> {
       requestType: 'form',
       headers: {
         Referer: baseURL,
-        Cookie: config.cookie,
+        Cookie:
+          config.cookie || 'OUTFOX_SEARCH_USER_ID=-1799202939@10.168.8.64',
       },
     });
 
@@ -199,11 +206,11 @@ export class Youdao extends Translator<YoudaoConfig> {
 
     const { appKey, key, onlyAPI } = finalConfig;
 
+    // 只使用 API
     if (onlyAPI) {
       return await this.fetchWithoutToken(text, from, to, { appKey, key });
     }
 
-    // 只使用 API
     const data = await this.fetchWithToken(text, from, to, finalConfig);
 
     if (data.success) return data;

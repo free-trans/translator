@@ -1,7 +1,7 @@
 {
   "name": "@arvinxu/languages",
   "description": "语言识别符",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "files": [
     "lib",
     "es",
@@ -17,6 +17,7 @@
     "build": "father-build",
     "test": "jest",
     "cov": "jest --coverage",
+    "prepublishOnly": "yarn build",
     "clean": "rm -rf es lib dist build coverage .umi"
   }
 }

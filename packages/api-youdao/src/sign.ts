@@ -10,6 +10,10 @@ import md5 from 'md5';
 export const signKey = (text: string, token: string, userAgent: string) => {
   const client = 'fanyideskweb';
 
+  if (!userAgent)
+    userAgent =
+      '5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36';
+
   const lts = `${Date.now()}`;
 
   const salt = lts + parseInt(`${Math.random() * 10}`, 10);

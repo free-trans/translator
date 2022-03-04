@@ -1,5 +1,5 @@
 {
-  "name": "@arvinxu/translator-<%- engine %>",
+  "name": "@arvinxu/translator-sogou",
   "private": false,
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
@@ -12,7 +12,6 @@
     "build": "father-build",
     "test": "jest",
     "cov": "jest --coverage",
-    "prepublishOnly": "yarn build",
     "clean": "rm -rf es lib dist build coverage .umi"
   },
   "dependencies": {
