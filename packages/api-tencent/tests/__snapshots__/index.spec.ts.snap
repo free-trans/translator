@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tencent withoutSDK should get one paragraph 1`] = `
+Object {
+  "from": "en",
+  "origin": Object {
+    "paragraphs": Array [
+      "Major retailers like Target and Ace Hardware follow the same pattern.Search is at the top, with large features (sales promotions) below.Both sites support browse with grids of cards.",
+    ],
+  },
+  "success": true,
+  "text": "Major retailers like Target and Ace Hardware follow the same pattern. Search is at the top, with large features (sales promotions) below. Both sites support browse with grids of cards.",
+  "to": "zh-CN",
+  "trans": Object {
+    "paragraphs": Array [
+      "。。",
+    ],
+  },
+}
+`;

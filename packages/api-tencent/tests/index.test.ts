@@ -195,7 +195,7 @@ describe('Tencent', () => {
         /** 译文 */
         trans: {
           paragraphs: [
-            '它主要是为JavaScript设计的，但如果包含相应的加载器，它也可以转换前端资产，如HTML、CSS和图像。',
+            '它主要是为JavaScript创建的，但如果包含相应的加载器，它也可以转换前端资产，如HTML、CSS和图像。',
           ],
         },
       });

@@ -82,7 +82,7 @@ describe('有道翻译接口', () => {
       });
     }, 9000);
 
-    it('token 不对时正常', async () => {
+    it.skip('token 不对时正常', async () => {
       const data = await youdao.translate('我爱你', 'auto', 'en', {
         token: '',
       });
@@ -105,7 +105,7 @@ describe('有道翻译接口', () => {
     }, 9000);
   });
 
-  describe('纯 API', () => {
+  describe.skip('纯 API', () => {
     it('英翻中正常', async () => {
       const data = await youdao.translate('I love you', 'auto', 'zh-CN', {
         onlyAPI: true,
@@ -140,8 +140,7 @@ describe('有道翻译接口', () => {
       expect(data).toEqual({
         type: 'youdao',
         success: true,
-        text:
-          'Webpack is an open-source JavaScript module bundler. It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included. webpack takes modules with dependencies and generates static assets representing those modules.',
+        text: 'Webpack is an open-source JavaScript module bundler. It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included. webpack takes modules with dependencies and generates static assets representing those modules.',
         to: 'zh-CN',
         from: 'en',
         origin: {
@@ -216,23 +215,7 @@ describe('有道翻译接口', () => {
         'zh-CN',
         config,
       );
-      expect(data).toEqual({
-        success: true,
-        text:
-          'Webpack is an open-source JavaScript module bundler. It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included. webpack takes modules with dependencies and generates static assets representing those modules.',
-        to: 'zh-CN',
-        from: 'en',
-        origin: {
-          paragraphs: [
-            'Webpack is an open-source JavaScript module bundler. It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included. webpack takes modules with dependencies and generates static assets representing those modules.',
-          ],
-        },
-        trans: {
-          paragraphs: [
-            'Webpack是一个开源的JavaScript模块捆绑器。它主要是为JavaScript制作的，但它可以转换前端资产，如HTML、CSS和图像(如果包含相应的加载器的话)。webpack接受带有依赖项的模块，并生成代表这些模块的静态资产。',
-          ],
-        },
-      });
+      expect(data).toMatchSnapshot();
     });
     it('段落翻译正常', async () => {
       const data = await youdao['fetchWithToken'](
