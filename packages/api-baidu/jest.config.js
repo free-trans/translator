@@ -8,6 +8,5 @@ module.exports = {
   ...base,
   rootDir: '../..',
   roots: [root],
-  name: packageName,
   displayName: packageName,
 };
