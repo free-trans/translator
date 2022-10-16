@@ -99,7 +99,7 @@
     "lerna": "^3.22.1",
     "less-loader": "^6.0.0",
     "lint-staged": "^10.0.2",
-    "mini-css-extract-plugin": "^0.9.0",
+    "mini-css-extract-plugin": "^2.6.1",
     "multi-semantic-release": "^2.6.0",
     "onchange": "^7.1.0",
     "prettier": "^2.1.2",
