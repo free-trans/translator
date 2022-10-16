@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`有道翻译接口 withToken 长句结果正常 1`] = `
-Object {
+{
   "from": "en",
-  "origin": Object {
-    "paragraphs": Array [
+  "origin": {
+    "paragraphs": [
       "Webpack is an open-source JavaScript module bundler. It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included. webpack takes modules with dependencies and generates static assets representing those modules.",
     ],
   },
   "success": true,
   "text": "Webpack is an open-source JavaScript module bundler. It is made primarily for JavaScript, but it can transform front-end assets such as HTML, CSS, and images if the corresponding loaders are included. webpack takes modules with dependencies and generates static assets representing those modules.",
   "to": "zh-CN",
-  "trans": Object {
-    "paragraphs": Array [
-      "Webpack是一个开源的JavaScript模块绑定器。它主要是为JavaScript制作的，但如果包含相应的加载器，它可以转换前端资产，如HTML、CSS和图像。Webpack接受依赖的模块，并生成代表这些模块的静态资产。",
+  "trans": {
+    "paragraphs": [
+      "Webpack是一个开源的JavaScript模块绑定器。它主要是为JavaScript制作的，但如果包含相应的加载器，它可以转换HTML、CSS和图像等前端资产。Webpack接受具有依赖关系的模块，并生成表示这些模块的静态资产。",
     ],
   },
 }

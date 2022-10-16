@@ -8,8 +8,6 @@ const config = createConfig({
 
 module.exports = {
   ...config,
-  testMatch: [...config.testMatch, '**/*.spec.(t|j)s(x)?'],
-
   verbose: true,
   setupFiles: [...config.setupFiles, path.join(__dirname, './tests/setup')],
   setupFilesAfterEnv: [path.join(__dirname, './tests/timeout')],
